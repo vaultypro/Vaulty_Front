@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import moment from "moment";
-
+import Vaulty from "./assets/VaultyWP.pdf";
 import logo from "./assets/vaulty.png";
 import bgImg from "./assets/ilustrator.png";
 import cardicon1 from "./assets/cardicon1.png";
@@ -10,11 +10,17 @@ import cardicon2 from "./assets/cardicon2.png";
 import cardicon3 from "./assets/cardicon3.png";
 import side1 from "./assets/side1.png";
 import side2 from "./assets/side2.png";
+import pancakeswap from "./assets/pancakesswap.png";
 import bnb from "./assets/binance.png";
 import keeToken from "./assets/keetoken.png";
 import side3 from "./assets/side3.png";
 import Swal from "sweetalert2";
 import bgImg2 from "./assets/banner_vector3.png";
+import CoinMoon from "./assets/coinmooner.png";
+import CoinGecko from "./assets/coingekco.png";
+import Coinod from "./assets/Coinsgods.png";
+import CoinScope from "./assets/coinscope.png";
+import CoinMarket from "./assets/Coinmarketcap01.png";
 import { connect } from "react-redux";
 import { ConnectMetamask, DisconnectWallet, web3_ } from "./Services/index";
 import { ConnectWeb3Wallet } from "./Services";
@@ -346,19 +352,21 @@ function App(props) {
           <div className="stats-section">
             <div className="stats-section__reference">
               <i className="fas fa-chart-line" />
-              <h3 className="stats-section__reference__title">100 $VLT</h3>
+              <h3 className="stats-section__reference__title">$VLT</h3>
               <p className="stats-section__reference__description">Staking</p>
             </div>
             <div className="stats-section__reference">
               <i className="fas fa-user" />
-              <h3 className="stats-section__reference__title">100+</h3>
-              <p className="stats-section__reference__description">Buy</p>
+              <h3 className="stats-section__reference__title">Card</h3>
+              <p className="stats-section__reference__description">
+                Vaulty Visa Cards
+              </p>
             </div>
             <div className="stats-section__reference">
               <i className="fas fa-globe" />
-              <h3 className="stats-section__reference__title">195</h3>
+              <h3 className="stats-section__reference__title">Mobile App</h3>
               <p className="stats-section__reference__description">
-                Countries Supported
+                NFT and Crypto Bridge
               </p>
             </div>
           </div>
@@ -611,12 +619,12 @@ function App(props) {
         {/* Cryptocurrencies section */}
         <section className="cryptocurrencies-section" id="products">
           <h2 className="cryptocurrencies-section__title">
-            Advantages OF Using Vaulty
+            Advantages Of Using Vaulty
           </h2>
           <div className="cryptocurrencies-info-cards">
             <div className="info-card">
               <img src={cardicon1} width="60" />
-              <h3 className="info-card__title">Crypto Traders </h3>
+              <h3 className="info-card__title">CRYPTO TRADERS </h3>
               <p className="info-card__description">
                 The platform will enable cryptocurrency traders to buy and sell
                 cryptocurrencies.
@@ -627,7 +635,7 @@ function App(props) {
               <h3 className="info-card__title">TOKEN TO Vaulty (T2C)</h3>
               <p className="info-card__description">
                 A feature pioneered by Vaulty to exchange Token to Coin. This
-                feature enables new token companies to list on Vaulty.  
+                feature enables new token companies to list on Vaulty.
               </p>
             </div>
             <div className="info-card">
@@ -753,25 +761,15 @@ function App(props) {
               padding: 60,
             }}
           >
-            <img
-              src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_1.svg?_=fc54f8a"
-              className="socialWidth"
-            />
+            <img src={CoinGecko} className="socialWidth" />
 
-            <img
-              src="https://static.coingecko.com/s/coingecko-logo-63f24b60e1d2d526c141fee733ad2a39fbce7dabedd187a0dba95220396ce9a0.png"
-              className="socialWidth"
-            />
+            <img src={CoinMoon} className="socialWidth" />
 
-            <img
-              src="https://www.pngall.com/wp-content/uploads/10/PancakeSwap-Crypto-Logo-PNG-File.png"
-              className="socialWidth"
-            />
+            <img src={CoinScope} className="socialWidth" />
 
-            <img
-              src="https://www.pngall.com/wp-content/uploads/10/PancakeSwap-Crypto-Logo-PNG-File.png"
-              className="socialWidth"
-            />
+            <img src={Coinod} className="socialWidth" />
+            <img src={CoinMarket} className="socialWidth" />
+            <img src={pancakeswap} className="socialWidth" />
           </div>
         </section>
       </main>
@@ -816,6 +814,32 @@ function App(props) {
                   <ul>
                     <li>Set Expectation and Found right resources</li>
                     <li>Determine events require to achieve future goals</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="info">
+                <h3 className="title">Phase 3</h3>
+                <p className="paddingCls">
+                  <ul>
+                    <li>IDO LaunchPad</li>
+                    <li>Kee Token Release</li>
+                    <li>Swap Function</li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+            <div className="card">
+              <div className="info">
+                <h3 className="title" style={{ textAlign: "left" }}>
+                  Phase 4
+                </h3>
+                <p className="paddingCls">
+                  <ul>
+                    <li>Marketing</li>
+                    <li>Staking Rewards Release</li>
+                    <li>Community Expansion</li>
                   </ul>
                 </p>
               </div>
@@ -871,12 +895,8 @@ function App(props) {
                 <h3 className="main-footer-navbar__nav__title">Resources</h3>
               </li>
               <li className="main-footer-navbar__nav__item">
-                <a
-                  href="https://drive.google.com/file/d/1BbVJPPl04BnYQLJi-IHcABw1dmMNj-yd/view?usp=sharing"
-                  target="_blank"
-                  className="main-footer-navbar__nav__link"
-                >
-                  Download whitepaper
+                <a href={Vaulty} target="_blank" rel="noreferrer">
+                  Download Whitepaper
                 </a>
               </li>
             </ul>
