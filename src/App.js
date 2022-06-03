@@ -786,67 +786,62 @@ function App(props) {
         Roadmap
       </h2>
       <section id="roadmap">
+        <h2 style={{ textAlign: "center", padding: 30 }}>Phase 1</h2>
         <div className="timeline">
           <div className="outer">
             <div className="card">
               <div className="info">
-                <h3 className="title">Foundation</h3>
-                <p className="paddingCls">
-                  <ul>
-                    <li>
-                      Organizational Business Leaders are aligned for
-                      improvement
-                    </li>
-                    <li>Elaborate Business identity</li>
-                    <li>Build case for business change</li>
-                    <li>Set Parameters to drive growth</li>
-                    <li>Determine requirements for growth</li>
-                  </ul>
-                </p>
+                <h3 className="title">Ideation Phase</h3>
+                {/* <p className="paddingCls">
+              
+                </p> */}
               </div>
             </div>
             <div className="card">
               <div className="info">
                 <h3 className="title" style={{ textAlign: "left" }}>
-                  Focus
+                  Project Initation
                 </h3>
-                <p className="paddingCls">
-                  <ul>
-                    <li>Set Expectation and Found right resources</li>
-                    <li>Determine events require to achieve future goals</li>
-                  </ul>
-                </p>
               </div>
             </div>
             <div className="card">
               <div className="info">
-                <h3 className="title">Phase 3</h3>
-                <p className="paddingCls">
-                  <ul>
-                    <li>IDO LaunchPad</li>
-                    <li>Kee Token Release</li>
-                    <li>Swap Function</li>
-                  </ul>
-                </p>
+                <h3 className="title">Research,Planning & Design(RPD)</h3>
               </div>
             </div>
-            <div className="card">
-              <div className="info">
-                <h3 className="title" style={{ textAlign: "left" }}>
-                  Phase 4
-                </h3>
-                <p className="paddingCls">
-                  <ul>
-                    <li>Marketing</li>
-                    <li>Staking Rewards Release</li>
-                    <li>Community Expansion</li>
-                  </ul>
-                </p>
+          </div>
+          <h2 style={{ textAlign: "center" }}>Phase 2</h2>
+          <div className="timeline">
+            <div className="outer">
+              <div className="card">
+                <div className="info">
+                  <h3 className="title">Software Development</h3>
+                  <p className="paddingCls">
+                    <ul>
+                      <li>Mobile Application</li>
+                      <li>Blockchain</li>
+                      <li>Web Application</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+              <div className="card">
+                <div className="info">
+                  <h3 className="title" style={{ textAlign: "left" }}>
+                    Promotion
+                  </h3>
+                  <p className="paddingCls">
+                    <ul>
+                      <li>Marketing</li>
+                    </ul>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <section id="roadmap"></section>
 
       {/* Main footer */}
       <footer className="main-footer">
@@ -895,7 +890,12 @@ function App(props) {
                 <h3 className="main-footer-navbar__nav__title">Resources</h3>
               </li>
               <li className="main-footer-navbar__nav__item">
-                <a href={Vaulty} target="_blank" rel="noreferrer">
+                <a
+                  href={Vaulty}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="main-footer-navbar__nav__link"
+                >
                   Download Whitepaper
                 </a>
               </li>
