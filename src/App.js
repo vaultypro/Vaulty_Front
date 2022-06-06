@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import moment from "moment";
-import Vaulty from "./assets/VaultyWP.pdf";
+import Vaulty from "./assets/VaultyWp.pdf";
 import logo from "./assets/vaulty.png";
 import bgImg from "./assets/ilustrator.png";
 import cardicon1 from "./assets/cardicon1.png";
@@ -357,7 +357,9 @@ function App(props) {
             </div>
             <div className="stats-section__reference">
               <i className="fas fa-user" />
-              <h3 className="stats-section__reference__title">Card</h3>
+              <h3 className="stats-section__reference__title">
+                Credits Cards & Vaulty Visa Cards
+              </h3>
               <p className="stats-section__reference__description">
                 Vaulty Visa Cards
               </p>
@@ -374,7 +376,7 @@ function App(props) {
           <div className="why-us-section" id="about">
             <div className="why-us-section__content">
               <h2 className="why-us-section__content__title">
-                Why you should choose
+                Why you should choose Vaulty?
               </h2>
               <p className="why-us-section__content__description">
                 VAULTY is a digital finances app, with digital assets that
@@ -509,7 +511,9 @@ function App(props) {
                 </>
               ) : (
                 <>
-                  <h1>ICO Is Over You Can Not Invest</h1>
+                  <h1 style={{ fontSize: 28, color: "white" }}>
+                    ICO Is Over You Can Not Invest
+                  </h1>
                 </>
               )}
             </div>
@@ -632,7 +636,7 @@ function App(props) {
             </div>
             <div className="info-card">
               <img src={cardicon2} width="60" />
-              <h3 className="info-card__title">TOKEN TO Vaulty (T2C)</h3>
+              <h3 className="info-card__title">TOKEN TO COIN (T2C)</h3>
               <p className="info-card__description">
                 A feature pioneered by Vaulty to exchange Token to Coin. This
                 feature enables new token companies to list on Vaulty.
@@ -675,7 +679,7 @@ function App(props) {
                 Utility
               </h3>
               <p className="detailed-stats-article__content__description">
-                In the crypto relm we belive utility is the cornerstone .
+                In the Crypto realm, we believe utility is the cornerstone.
               </p>
             </div>
             <img
