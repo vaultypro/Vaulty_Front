@@ -358,10 +358,10 @@ function App(props) {
             <div className="stats-section__reference">
               <i className="fas fa-user" />
               <h3 className="stats-section__reference__title">
-                Credits Cards & Vaulty Visa Cards
+                Custom Credit Card
               </h3>
               <p className="stats-section__reference__description">
-                Vaulty Visa Cards
+                Vaulty Master Card
               </p>
             </div>
             <div className="stats-section__reference">
