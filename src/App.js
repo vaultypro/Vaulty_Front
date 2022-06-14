@@ -3,7 +3,9 @@
 import React from "react";
 import moment from "moment";
 import Vaulty from "./assets/VaultyWp.pdf";
-import logo from "./assets/vaulty.png";
+import RoadmapPc from "./assets/roadmap-01.svg";
+import RoadmapMobile from "./assets/roadmap-02.svg";
+import logo from "./assets/logo.svg";
 import bgImg from "./assets/ilustrator.png";
 import cardicon1 from "./assets/cardicon1.png";
 import cardicon2 from "./assets/cardicon2.png";
@@ -243,7 +245,7 @@ function App(props) {
               src={logo}
               alt="KeeSwap logo"
               className="main-header-navbar__logo"
-              style={{ width: 120 }}
+              style={{ width: 160 }}
             />
             <ul className="main-header-navbar__nav">
               <li className="main-header-navbar__nav__item">
@@ -778,74 +780,11 @@ function App(props) {
         </section>
       </main>
       {/* Call To Action */}
-      <h2
-        className="features-section__title"
-        style={{
-          margin: "0 auto",
-          textAlign: "center",
-          fontSize: 30,
-          color: "aliceblue",
-        }}
-      >
-        Roadmap
-      </h2>
+
       <section id="roadmap">
-        <h2 style={{ textAlign: "center", padding: 30 }}>Phase 1</h2>
-        <div className="timeline">
-          <div className="outer">
-            <div className="card">
-              <div className="info">
-                <h3 className="title">Ideation Phase</h3>
-                {/* <p className="paddingCls">
-              
-                </p> */}
-              </div>
-            </div>
-            <div className="card">
-              <div className="info">
-                <h3 className="title" style={{ textAlign: "left" }}>
-                  Project Initation
-                </h3>
-              </div>
-            </div>
-            <div className="card">
-              <div className="info">
-                <h3 className="title">Research,Planning & Design(RPD)</h3>
-              </div>
-            </div>
-          </div>
-          <h2 style={{ textAlign: "center" }}>Phase 2</h2>
-          <div className="timeline">
-            <div className="outer">
-              <div className="card">
-                <div className="info">
-                  <h3 className="title">Software Development</h3>
-                  <p className="paddingCls">
-                    <ul>
-                      <li>Mobile Application</li>
-                      <li>Blockchain</li>
-                      <li>Web Application</li>
-                    </ul>
-                  </p>
-                </div>
-              </div>
-              <div className="card">
-                <div className="info">
-                  <h3 className="title" style={{ textAlign: "left" }}>
-                    Promotion
-                  </h3>
-                  <p className="paddingCls">
-                    <ul>
-                      <li>Marketing</li>
-                    </ul>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src={RoadmapPc} className="widthCls" />
+        <img src={RoadmapMobile} className="widthClsMobile" />
       </section>
-      <section id="roadmap"></section>
 
       {/* Main footer */}
       <footer className="main-footer">
@@ -913,7 +852,7 @@ function App(props) {
               className="copy-and-social__copy"
               style={{ color: "aliceblue" }}
             >
-              ©2022 Valuty. All rights reserved
+              ©2022 Vaulty. All rights reserved
             </h3>
             <div className="social-icons">
               <i className="fab fa-facebook-f" />

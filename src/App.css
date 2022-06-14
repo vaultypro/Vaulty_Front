@@ -28,6 +28,10 @@
   background-position: center;
   margin-bottom: 75px;
 } 
+
+.widthClsMobile{
+  display: none;
+}
 .main-header-navbar{
   
   width: 100%;
@@ -1469,6 +1473,12 @@ button[disabled]{
 }
 }
 @media (max-width:900px) { 
+  .widthCls{
+    display: none;
+  }
+  .widthClsMobile{
+    display: block;
+  }
   .Social{
     flex-direction: column;
     align-items: center;
