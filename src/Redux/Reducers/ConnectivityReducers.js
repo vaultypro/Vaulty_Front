@@ -22,6 +22,7 @@ export function ConnectivityReducer(state = initialState, action) {
       };
     case "WALLET_DISCONNECT":
       return {
+        metamaskAddress: "",
         metamaskBalance: "",
         metamaskNetwork: "",
         metamaskConnect: false,

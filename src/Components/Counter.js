@@ -8,7 +8,6 @@ function CounterComponent(props) {
   const [hour, setHour] = useState(0);
   const [day, setDay] = useState(0);
   const setTime = props.endDate;
-  console.log(setTime);
 
   useEffect(() => {
     function counter() {
@@ -45,9 +44,23 @@ function CounterComponent(props) {
   }, [CounterValue]);
 
   return (
-    <div className="flex justify-between my-[20px]">
+    <div
+      className="flex justify-evenly my-[20px]"
+      style={{
+        padding: 10,
+        background: "rgba(255, 255, 255, 0.05 )",
+        borderRadius: "16px",
+        boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+        backdropFilter: "blur(1.5px)",
+        webkitBackdropFilter: "blur(1.5px)",
+        border: "1px solid rgba(255, 255, 255, 0.4)",
+      }}
+    >
       <div className="flex flex-col">
-        <span className="font-bold text" style={{ fontSize: 14 }}>
+        <span
+          className="font-bold text"
+          style={{ fontSize: 14, textAlign: "center" }}
+        >
           {day}
         </span>
         <span className="text-[9px]" style={{ fontSize: 14 }}>
@@ -55,7 +68,10 @@ function CounterComponent(props) {
         </span>
       </div>
       <div className="flex flex-col">
-        <span className="font-bold " style={{ fontSize: 14 }}>
+        <span
+          className="font-bold "
+          style={{ fontSize: 14, textAlign: "center" }}
+        >
           {hour}
         </span>
         <span className="text-[9px]" style={{ fontSize: 14 }}>
@@ -63,7 +79,10 @@ function CounterComponent(props) {
         </span>
       </div>
       <div className="flex flex-col">
-        <span className="font-bold " style={{ fontSize: 14 }}>
+        <span
+          className="font-bold "
+          style={{ fontSize: 14, textAlign: "center" }}
+        >
           {minute}
         </span>
         <span className="text-[9px]" style={{ fontSize: 14 }}>
@@ -71,7 +90,10 @@ function CounterComponent(props) {
         </span>
       </div>
       <div className="flex flex-col">
-        <span className="font-bold " style={{ fontSize: 14 }}>
+        <span
+          className="font-bold "
+          style={{ fontSize: 14, textAlign: "center" }}
+        >
           {second}
         </span>
         <span className="text-[9px]" style={{ fontSize: 14 }}>
