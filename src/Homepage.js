@@ -7,6 +7,7 @@ import logo from "./assets/logo.svg";
 import logoVlt from "./assets/logobuy.png";
 import bgImg from "./assets/ilustrator.png";
 import { useNavigate } from "react-router-dom";
+import pdf from "./assets/VaultyWp.pdf";
 import cardicon1 from "./assets/cardicon1.png";
 import cardicon2 from "./assets/cardicon2.png";
 import cardicon3 from "./assets/cardicon3.png";
@@ -946,7 +947,7 @@ function HomePage(props) {
               </li>
               <li className="main-footer-navbar__nav__item">
                 <a
-                  href="https://www.vaulty.pro/static/media/VaultyWp.398afecd.pdf"
+                  href={pdf}
                   target="_blank"
                   className="main-footer-navbar__nav__link"
                 >
