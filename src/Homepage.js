@@ -805,8 +805,14 @@ function HomePage(props) {
             />
           </article>
           <article className="grow-profit-article">
-            <div className="grow-profit-article__content">
-              <h3 className="grow-profit-article__content__title">
+            <div
+              className="grow-profit-article__content"
+              style={{ flexDirection: "column", alignItems: "baseline" }}
+            >
+              <h3
+                className="grow-profit-article__content__title"
+                style={{ fontSize: "24px !important" }}
+              >
                 Inclusivity
               </h3>
               <p className="grow-profit-article__content__description">
