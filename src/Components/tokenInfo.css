@@ -1,0 +1,41 @@
+.token-info-title {
+  font-family: Roboto-Bold;
+  font-size: 26px;
+  color: #ffcd00;
+  margin: 0px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.token-info-section {
+  -webkit-box-shadow: #00000029 3px 3px 10px;
+  box-shadow: #00000029 3px 3px 10px;
+  width: 100%;
+  height: auto;
+  padding: 22px 0px 0px 0px;
+  border-radius: 10px;
+}
+.pr-0,
+.px-0 {
+  padding-right: 0 !important;
+}
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.container {
+  max-width: 960px;
+}
+.token-details-box {
+  padding: 14px 0px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.token-details-box2 {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+}

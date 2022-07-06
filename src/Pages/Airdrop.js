@@ -2,7 +2,12 @@ import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.svg";
 import "./staking.css";
 import "./airdrop.css";
-
+import image1 from "../assets/airdrop/airdrop/image1.gif";
+import image2 from "../assets/airdrop/airdrop/image2.svg";
+import image3 from "../assets/airdrop/airdrop/image3.svg";
+import image4 from "../assets/airdrop/airdrop/image4.svg";
+import image5 from "../assets/airdrop/airdrop/image5.svg";
+import image6 from "../assets/airdrop/airdrop/image6.svg";
 import {
   ConnectMetamask,
   ConnectWeb3Wallet,
@@ -69,7 +74,7 @@ function Airdrop(props) {
 
   const airDropUsersList = async () => {
     return await new web3_.eth.Contract(airdropABI, airdrop).methods
-      .AirDropUsers()
+      .getUsersList()
       .call();
   };
 
@@ -130,7 +135,14 @@ function Airdrop(props) {
   }
   return (
     <div>
-      <div className="main-containerCls">
+      <div
+        className="main-containerCls heightCls"
+        style={{
+          backgroundImage: `url(${image1})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <header className="main-header">
           <div
             className="main-header-content-container"
@@ -220,313 +232,181 @@ function Airdrop(props) {
                 </li>
               </ul>
             </nav>
-            <div class="container">
-              <div class="neon">Be A Millionaire! </div>
-              <div class="flux">
-                Participate in #cryptocontest Just follow <b>5</b> simple steps.
-              </div>
-              <div class="flux">
-                The First 1 Lakh users will get 100 tokens instantly.
-              </div>
-            </div>
-
-            <>
-              <div
-                className="main-header-content-container flexDirRev"
-                style={{ justifyContent: "space-around", margin: 10 }}
-              >
-                <div
-                  className="main-header-content-principal"
-                  style={{ flexDirection: "column" }}
-                >
-                  <h1
-                    className="main-header-content-principal__title"
-                    style={{ fontSize: 18 }}
-                  >
-                    <h1>Step 1:</h1>
-                    <h1>
-                      Follow <span>#Vaultypro </span> &amp;
-                      <span className=""> #VaultyWallet</span>
-                    </h1>
-                  </h1>
-                  <a
-                    href="https://twitter.com/intent/tweet?button_hashtag=#Vaultypro #VaultyWallet&ref_src=twsrc%5Etfw"
-                    class="twitter-hashtag-button"
-                    target="_blank"
-                    data-show-count="false"
-                    className="main-header-navbar__nav__link disconnectButton"
-                    style={{
-                      borderRadius: "50px",
-                      border: "2px solid green",
-                      padding: 10,
-                      color: "green",
-                      cursor: "pointer",
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                    }}
-                    onClick={() => {
-                      setSelectedMonth({ ...selectedMonth, one: true });
-                    }}
-                  >
-                    {selectedMonth.one ? (
-                      <> Completed </>
-                    ) : (
-                      <>Tweet #Vaultypro #VaultyWallet</>
-                    )}
-                  </a>
-                </div>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Twitter_logo.svg/2560px-Twitter_logo.svg.png"
-                  style={{ width: 100 }}
-                  alt
-                  className=""
-                />
-              </div>
-            </>
-            <>
-              <div
-                className="main-header-content-container"
-                style={{ justifyContent: "space-around", margin: 10 }}
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/2048px-Facebook_f_logo_%282021%29.svg.png"
-                  style={{ width: 100 }}
-                  alt
-                  className=""
-                />
-                <div
-                  className="main-header-content-principal"
-                  style={{ flexDirection: "column" }}
-                >
-                  <h1
-                    className="main-header-content-principal__title"
-                    style={{ fontSize: 18 }}
-                  >
-                    <h1>Step 2:</h1>
-                    <h1>
-                      Join <span>Facebook Page</span>
-                    </h1>
-                  </h1>
-
-                  <a
-                    className="main-header-navbar__nav__link disconnectButton"
-                    href="https://www.facebook.com/VaultyPRO"
-                    target="_blank"
-                    style={{
-                      borderRadius: "50px",
-                      border: "2px solid green",
-                      padding: 10,
-                      color: "green",
-                      cursor: "pointer",
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                    }}
-                    onClick={() => {
-                      setSelectedMonth({ ...selectedMonth, two: true });
-                    }}
-                  >
-                    {selectedMonth.two ? (
-                      <> Completed </>
-                    ) : (
-                      <> Follow On Facebook</>
-                    )}
-                  </a>
-                </div>
-              </div>
-            </>
-            <>
-              <div
-                className="main-header-content-container flexDirRev"
-                style={{ justifyContent: "space-around" }}
-              >
-                <div
-                  className="main-header-content-principal"
-                  style={{ flexDirection: "column" }}
-                >
-                  <h1
-                    className="main-header-content-principal__title"
-                    style={{ fontSize: 18 }}
-                  >
-                    <h1>Step 3:</h1>
-
-                    <h1>
-                      Tag <span>3 Friends</span>
-                      <span className=""> In Comment Section</span>
-                    </h1>
-                  </h1>
-
-                  <a
-                    className="main-header-navbar__nav__link disconnectButton"
-                    href="https://www.facebook.com/VaultyPRO"
-                    target="_blank"
-                    style={{
-                      borderRadius: "50px",
-                      border: "2px solid green",
-                      padding: 10,
-                      color: "green",
-                      cursor: "pointer",
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                    }}
-                    onClick={() => {
-                      setSelectedMonth({ ...selectedMonth, three: true });
-                    }}
-                  >
-                    {selectedMonth.three ? <> Completed </> : <> Comment </>}
-                  </a>
-                </div>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/2048px-Facebook_f_logo_%282021%29.svg.png"
-                  style={{ width: 100 }}
-                  alt
-                  className=""
-                />
-              </div>
-            </>
-
-            <>
-              {" "}
-              <div
-                className="main-header-content-container "
-                style={{ justifyContent: "space-around", margin: 10 }}
-              >
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/768px-Instagram_logo_2016.svg.png"
-                  style={{ width: 100 }}
-                  alt
-                  className=""
-                />
-                <div
-                  className="main-header-content-principal"
-                  style={{ flexDirection: "column" }}
-                >
-                  <h1
-                    className="main-header-content-principal__title"
-                    style={{ fontSize: 18 }}
-                  >
-                    <h1>Step 4: </h1>
-                    <h1>
-                      Put A <span>Story Mentioning Us</span>
-                    </h1>
-                  </h1>
-
-                  <a
-                    className="main-header-navbar__nav__link disconnectButton"
-                    href="https://www.instagram.com/vaultypro/"
-                    target="_blank"
-                    style={{
-                      borderRadius: "50px",
-                      border: "2px solid green",
-                      padding: 10,
-                      color: "green",
-                      cursor: "pointer",
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                    }}
-                    onClick={() => {
-                      setSelectedMonth({ ...selectedMonth, four: true });
-                    }}
-                  >
-                    {selectedMonth.four ? (
-                      <> Completed </>
-                    ) : (
-                      <> Story Instagram</>
-                    )}
-                  </a>
-                </div>
-              </div>
-            </>
-            <>
-              <div
-                className="main-header-content-container flexDirRev"
-                style={{ justifyContent: "space-around" }}
-              >
-                <div
-                  className="main-header-content-principal"
-                  style={{ flexDirection: "column" }}
-                >
-                  <h1
-                    className="main-header-content-principal__title"
-                    style={{ fontSize: 18 }}
-                  >
-                    <h1>Step 5: </h1>
-                    <h1>
-                      Join <span>Our</span>
-                      <span className=""> Telegram Group</span>
-                    </h1>
-                  </h1>
-
-                  <a
-                    className="main-header-navbar__nav__link disconnectButton"
-                    href="https://t.me/vaultypro"
-                    target="_blank"
-                    style={{
-                      borderRadius: "50px",
-                      border: "2px solid green",
-                      padding: 10,
-                      color: "green",
-                      cursor: "pointer",
-                      fontSize: "20px",
-                      fontWeight: "bold",
-                    }}
-                    onClick={() => {
-                      setSelectedMonth({ ...selectedMonth, five: true });
-                    }}
-                  >
-                    {selectedMonth.five ? (
-                      <> Completed </>
-                    ) : (
-                      <> Join Telegram</>
-                    )}
-                  </a>
-                </div>
-                <img
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png"
-                  style={{ width: 100 }}
-                  alt
-                  className=""
-                />
-              </div>
-            </>
           </div>
-          {selectedMonth.one &&
-          selectedMonth.two &&
-          selectedMonth.three &&
-          selectedMonth.four &&
-          selectedMonth.five ? (
-            <>
+        </header>
+        <>
+          <h1 style={{ textAlign: "center" }} className="neon">
+            Airdrop
+          </h1>
+          <h1 style={{ padding: 5, textAlign: "center", fontSize: 22 }}>
+            How To Participate?
+          </h1>
+          <div
+            className="main-header-content-container "
+            style={{ justifyContent: "center" }}
+          >
+            <div
+              className="main-header-content-principal"
+              style={{ flexDirection: "column", width: "20%" }}
+            >
               <a
-                className="main-header-navbar__nav__link disconnectButton"
-                style={{
-                  borderRadius: "50px",
-                  border: "2px solid green",
-                  padding: 10,
-                  margin: 20,
-                  marginLeft: "50%",
-                  marginTop: "5%",
-                  color: "green",
-                  cursor: "pointer",
-                  fontSize: "20px",
-                  fontWeight: "bold",
+                href="https://twitter.com/VaultyPRO"
+                target="_blank"
+                onClick={() => {
+                  setSelectedMonth({ ...selectedMonth, one: true });
                 }}
-                onClick={claimAirdrop}
               >
-                Claim Airdrop
+                {selectedMonth.one ? (
+                  <img
+                    src={image3}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                ) : (
+                  <img
+                    src={image3}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                )}
               </a>
-            </>
-          ) : (
-            <h1
+            </div>
+            <div
+              className="main-header-content-principal"
+              style={{ flexDirection: "column", width: "20%" }}
+            >
+              <a
+                href="https://www.facebook.com/VaultyPRO
+"
+                target="_blank"
+                onClick={() => {
+                  setSelectedMonth({ ...selectedMonth, two: true });
+                }}
+              >
+                {selectedMonth.two ? (
+                  <img
+                    src={image4}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                ) : (
+                  <img
+                    src={image4}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                )}
+              </a>
+            </div>
+            <div
+              className="main-header-content-principal"
+              style={{ flexDirection: "column", width: "20%" }}
+            >
+              <a
+                href="https://discord.com/invite/EXuUuxn5"
+                target="_blank"
+                onClick={() => {
+                  setSelectedMonth({ ...selectedMonth, three: true });
+                }}
+              >
+                {selectedMonth.three ? (
+                  <img
+                    src={image5}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                ) : (
+                  <img
+                    src={image5}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                )}
+              </a>
+            </div>
+            <div
+              className="main-header-content-principal hover:translate-y-6"
+              style={{ flexDirection: "column", width: "20%" }}
+            >
+              <a
+                href="https://www.instagram.com/vaultypro/"
+                target="_blank"
+                onClick={() => {
+                  setSelectedMonth({ ...selectedMonth, four: true });
+                }}
+              >
+                {selectedMonth.four ? (
+                  <img
+                    src={image6}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                ) : (
+                  <img
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                    src={image6}
+                    width="200"
+                  />
+                )}
+              </a>
+            </div>
+            <div
+              className="main-header-content-principal"
               style={{
-                textAlign: "center",
-                fontSize: 26,
-                color: "white",
-                margin: "15px 0",
+                flexDirection: "column",
+                maxWidth: "300px !important",
+                width: "20%",
               }}
             >
-              Please Complete tasks
-            </h1>
-          )}
-        </header>
+              <a
+                href="https://t.me/vaultypro"
+                target="_blank"
+                onClick={() => {
+                  setSelectedMonth({ ...selectedMonth, five: true });
+                }}
+              >
+                {selectedMonth.five ? (
+                  <img
+                    src={image2}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                ) : (
+                  <img
+                    src={image2}
+                    width="200"
+                    className="hover:-translate-y-6 transition ease-in-out delay-550"
+                  />
+                )}
+              </a>
+            </div>
+          </div>
+        </>
+        {selectedMonth.one &&
+        selectedMonth.two &&
+        selectedMonth.three &&
+        selectedMonth.four &&
+        selectedMonth.five ? (
+          <>
+            <div className="flex justify-center my-3">
+              <button
+                className="glow-on-hover"
+                style={{ width: "300px", height: "auto", padding: 10 }}
+              >
+                Claim Airdrop
+              </button>
+            </div>
+          </>
+        ) : (
+          <div className="flex justify-center my-3">
+            <button
+              className="glow-on-hover"
+              style={{ width: "300px", height: "auto", padding: 10 }}
+            >
+              Please Complete All Tasks
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

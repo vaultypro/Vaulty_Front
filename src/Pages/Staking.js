@@ -211,7 +211,6 @@ function Staking(props) {
   // console.log(new web3_.eth.Contract(StakingABI, staking));
   return (
     <div>
-      {console.log("User Data : ", UserData)}
       <div className="main-container" style={{ padding: "20px" }}>
         <header className="main-header">
           <div
@@ -505,7 +504,10 @@ function Staking(props) {
                     >
                       {!Approval ? (
                         <>
-                          <a onClick={handleApprove}>
+                          <a
+                            onClick={handleApprove}
+                            style={{ cursor: "pointer" }}
+                          >
                             <span />
                             <span />
                             <span />
@@ -517,7 +519,7 @@ function Staking(props) {
                         <></>
                       )}
 
-                      <a onClick={handleStake}>
+                      <a onClick={handleStake} style={{ cursor: "pointer" }}>
                         <span />
                         <span />
                         <span />

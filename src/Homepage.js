@@ -271,8 +271,14 @@ function HomePage(props) {
             />
             <ul className="main-header-navbar__nav">
               <li className="main-header-navbar__nav__item">
-                <a href="#" className="main-header-navbar__nav__link">
-                  Home
+                <a
+                  href="#"
+                  className="main-header-navbar__nav__link"
+                  onClick={() => {
+                    navigate("/coininfo");
+                  }}
+                >
+                  Token Info
                 </a>
               </li>
               <li className="main-header-navbar__nav__item">
@@ -367,7 +373,8 @@ function HomePage(props) {
           <div className="main-header-content-container">
             <div className="main-header-content-principal">
               <h1 className="main-header-content-principal__title">
-                The most Securitized & Convenient Wallet to store Cryptos & NFTs
+                The Most Securitized & Convenient Wallet To Store Cryptos &
+                NFT's
               </h1>
               <p className="main-header-content-principal__description typewriter">
                 Buying cryptos doesn’t have to be hurtful. With Vaulty, you will
@@ -375,14 +382,40 @@ function HomePage(props) {
                 simple.Safeguard your wallet and coins while paying the lowest
                 fees ever.
               </p>
-              <button
-                className="glow-on-hover"
-                onClick={() => {
-                  navigate("/airdrop");
-                }}
-              >
-                Airdrop
-              </button>
+              <div class="flex flex-wrap items-center mx-2">
+                {" "}
+                <button
+                  onClick={() => {
+                    navigate("/airdrop");
+                  }}
+                  style={{
+                    padding: 10,
+                    height: "auto",
+                    width: "fit-content",
+                    fontSize: "14px",
+                  }}
+                  className="bg-gradient-to-r from-[#a42e9a] to-[#5951f6]"
+                >
+                  Airdrop
+                </button>
+                <a
+                  href={pdf}
+                  target="_blank"
+                  className="main-footer-navbar__nav__link mx-2"
+                >
+                  <button
+                    style={{
+                      padding: 10,
+                      height: "auto",
+                      width: "fit-content",
+                      fontSize: "14px",
+                    }}
+                    className="bg-gradient-to-r from-[#a42e9a] to-[#5951f6]"
+                  >
+                    Whitepaper <i class="fa fa-download"></i>
+                  </button>
+                </a>
+              </div>
             </div>
             <img
               src={bgImg}
@@ -399,19 +432,30 @@ function HomePage(props) {
           <div className="stats-section">
             <div className="stats-section__reference">
               <i className="fas fa-chart-line" />
-              <h3 className="stats-section__reference__title">100 $VLT</h3>
-              <p className="stats-section__reference__description">Staking</p>
+              <h3 className="stats-section__reference__title">Wallet</h3>
+              <p className="stats-section__reference__description">
+                Crypto Wallet
+              </p>
             </div>
             <div className="stats-section__reference">
               <i className="fas fa-user" />
-              <h3 className="stats-section__reference__title">100+</h3>
-              <p className="stats-section__reference__description">Buy</p>
+              <h3 className="stats-section__reference__title">Exchange</h3>
+              <p className="stats-section__reference__description">
+                Built In Exchange
+              </p>
             </div>
             <div className="stats-section__reference">
               <i className="fas fa-globe" />
-              <h3 className="stats-section__reference__title">195</h3>
+              <h3 className="stats-section__reference__title">Staking</h3>
               <p className="stats-section__reference__description">
-                Countries Supported
+                Stake & Earn
+              </p>
+            </div>
+            <div className="stats-section__reference">
+              <i className="fas fa-credit-card" />
+              <h3 className="stats-section__reference__title">Cards</h3>
+              <p className="stats-section__reference__description">
+                Vaulty Master Cards
               </p>
             </div>
           </div>
@@ -419,16 +463,15 @@ function HomePage(props) {
           <div className="why-us-section" id="buy">
             <div className="why-us-section__content">
               <h2 className="why-us-section__content__title">
-                Why you should choose
+                Why Choose Vaulty?
               </h2>
               <p className="why-us-section__content__description">
                 VAULTY is a digital finances app, with digital assets that
                 combine wallets to send, receive, exchange, earn and borrow
-                (All-In-One Wallet System). Under the direction of Mr. Saitej,
-                Vaulty was founded with a vision to uplift trust and security
-                throughout the digital spectrum and with that, a group of
-                technical and marketing teams has been established in Dubai,
-                Estonia & India..
+                (All-In-One Wallet System). Vaulty was founded with a vision to
+                uplift trust and security throughout the digital spectrum and
+                with that, a group of technical and marketing teams has been
+                established in Dubai, Estonia & Ukraine.
               </p>
               {/* <a className="why-us-section__content__btn" onClick={handelPopup}>
                 Buy Now
@@ -606,7 +649,16 @@ function HomePage(props) {
                                 style={{ width: 30, height: 30 }}
                               />
                             ) : (
-                              <>Add To Whitelist</>
+                              <button
+                                className="glow-on-hover"
+                                style={{
+                                  width: "300px",
+                                  height: "auto",
+                                  padding: 10,
+                                }}
+                              >
+                                Add To Whitelist
+                              </button>
                             )}
                           </a>
                         </>
@@ -614,12 +666,22 @@ function HomePage(props) {
                     </>
                   ) : (
                     <>
-                      <h2>ICO Is Over You Can Not Invest</h2>
+                      <button
+                        className="glow-on-hover"
+                        style={{ width: "300px", height: "auto", padding: 10 }}
+                      >
+                        ICO Is Over You Can Not Invest
+                      </button>
                     </>
                   )}
                 </>
               ) : (
-                <h2>Please Connect Wallet</h2>
+                <button
+                  className="glow-on-hover"
+                  style={{ width: "300px", height: "auto", padding: 10 }}
+                >
+                  Please Connect Wallet
+                </button>
               )}
             </div>
             <img
@@ -728,12 +790,12 @@ function HomePage(props) {
         {/* Cryptocurrencies section */}
         <section className="cryptocurrencies-section" id="products">
           <h2 className="cryptocurrencies-section__title">
-            Advantages OF Using Vaulty
+            Advantages Of Using Vaulty
           </h2>
           <div className="cryptocurrencies-info-cards">
             <div className="info-card">
               <img src={cardicon1} width="60" />
-              <h3 className="info-card__title">Crypto Traders </h3>
+              <h3 className="info-card__title">CRYPTO TRADERS </h3>
               <p className="info-card__description">
                 The platform will enable cryptocurrency traders to buy and sell
                 cryptocurrencies.
@@ -741,7 +803,7 @@ function HomePage(props) {
             </div>
             <div className="info-card">
               <img src={cardicon2} width="60" />
-              <h3 className="info-card__title">TOKEN TO Vaulty (T2C)</h3>
+              <h3 className="info-card__title">TOKEN TO VAULTY (T2C)</h3>
               <p className="info-card__description">
                 A feature pioneered by Vaulty to exchange Token to Coin. This
                 feature enables new token companies to list on Vaulty.
@@ -764,12 +826,15 @@ function HomePage(props) {
           <h2 className="features-section__title">Our Core Values</h2>
           <article className="invest-smart-article">
             <div
-              className="invest-smart-article__content"
-              style={{ flexDirection: "column", alignItems: "baseline" }}
+              className="invest-smart-article__content justify-center md:justify-baseline"
+              style={{ flexDirection: "column", alignItems: "unset" }}
             >
-              <h3 className="invest-smart-article__content__title">
+              <h2
+                className="invest-smart-article__content__title"
+                style={{ fontSize: "4rem !important" }}
+              >
                 OUR VISION{" "}
-              </h3>
+              </h2>
               <br />
               <p className="invest-smart-article__content__description">
                 Vaulty has a vision to simplify fintech, by allowing Crypto to
@@ -787,9 +852,9 @@ function HomePage(props) {
           </article>
           <article className="detailed-stats-article">
             <div className="detailed-stats-article__content">
-              <h3 className="detailed-stats-article__content__title">
+              <h2 className="detailed-stats-article__content__title">
                 OUR MISSION
-              </h3>
+              </h2>
               <p className="detailed-stats-article__content__description">
                 Vaulty’s mission is to offer simple, transparent & fast
                 transactions within an ecosystem that's created to give people
@@ -806,15 +871,15 @@ function HomePage(props) {
           </article>
           <article className="grow-profit-article">
             <div
-              className="grow-profit-article__content"
-              style={{ flexDirection: "column", alignItems: "baseline" }}
+              className="grow-profit-article__content items-baseline md:justify-center"
+              style={{ flexDirection: "column", alignItems: "unset" }}
             >
-              <h3
+              <h2
                 className="grow-profit-article__content__title"
                 style={{ fontSize: "24px !important" }}
               >
                 Inclusivity
-              </h3>
+              </h2>
               <p className="grow-profit-article__content__description">
                 At Vaulty we put inclusivity at the center of our purpose.
               </p>
@@ -906,16 +971,16 @@ function HomePage(props) {
       </section>
 
       {/* Main footer */}
-      <footer className="main-footer" style={{ padding: "10px 0" }}>
+      {/* <footer className="main-footer" style={{ padding: "10px 0" }}>
         <div className="footer-container">
           <img
             src={logo}
             alt="KeeSwap company logo"
             className="main-footer__logo"
           />
-          {/* Footer navs */}
+
           <nav className="main-footer-navbar">
-            {/* Quick Link nav */}
+
             <ul className="main-footer-navbar__nav">
               <li className="main-footer-navbar__nav__item">
                 <h3 className="main-footer-navbar__nav__title">Quick Link</h3>
@@ -946,7 +1011,7 @@ function HomePage(props) {
                 </a>
               </li>
             </ul>
-            {/* Resources link */}
+
             <ul className="main-footer-navbar__nav">
               <li className="main-footer-navbar__nav__item">
                 <h3 className="main-footer-navbar__nav__title">Resources</h3>
@@ -962,9 +1027,7 @@ function HomePage(props) {
               </li>
             </ul>
           </nav>
-          {/* Payment systems */}
 
-          {/* Copy and social links */}
           <div className="copy-and-social">
             <h3
               className="copy-and-social__copy"
@@ -986,8 +1049,8 @@ function HomePage(props) {
             </div>
           </div>
         </div>
-      </footer>
-      {/* <Footer /> */}
+      </footer> */}
+      <Footer />
       {/* Attribution footer */}
     </div>
   );

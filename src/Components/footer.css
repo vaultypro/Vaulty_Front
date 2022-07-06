@@ -1,85 +1,180 @@
 .footer-clean {
-    padding:50px 0;
-    background-color:#fff;
-    color:#4b4c4d;
+  padding: 50px 0;
+  background-color: #fff;
+  color: #4b4c4d;
+}
+.app-btn {
+  width: 100%;
+  max-width: 190px;
+  color: #fff;
+  margin: 20px 10px;
+  text-align: left;
+  border-radius: 5px;
+  text-decoration: none;
+
+  font-size: 10px;
+  text-transform: uppercase;
+}
+.main {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%;
+  flex-direction: column;
+  margin-right: -10px;
+  margin-left: -10px;
+  padding-top: 0rem;
+  gap: 1.5rem;
+  margin-bottom: 0.5rem;
+  -ms-flex-pack: center;
+
+  align-items: center;
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.nav-link-text {
+  font-size: 12px;
+  padding: 2px;
+
+  font-weight: 250;
+  text-align: center;
+  font-family: inherit;
+  color: #eee !important;
+}
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+.nav-links {
+  color: rgba(119, 22, 237, 0.8);
+  background-color: #000;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+}
+.nav-links:hover {
+  background-color: rgba(145, 31, 207, 0.8);
+  color: #eee !important;
+  transform: scaleX(1.1) scaleY(1.1);
+}
+.credits {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.credits a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #818181;
+  font-family: Degular, sans-serif;
+  text-decoration: none;
+}
+.app-btn.blu {
+  background-color: #101010;
+  width: 100px;
+  height: 50px;
+  transition: background-color 0.25s linear;
+}
+.app-btn.blu:hover {
+  background-color: #293cc8;
+  color: #fff;
+}
+.app-btn i {
+  width: 20%;
+  text-align: center;
+  font-size: 18px;
+  margin: 7px;
+}
+.app-btn .big-txt {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.footer-clean h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-clean ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.footer-clean ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity: 1;
+}
+
+.footer-clean .item.social {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .footer-clean .item {
+    text-align: center;
+    padding-bottom: 20px;
   }
-  
-  .footer-clean h3 {
-    margin-top:0;
-    margin-bottom:12px;
-    font-weight:bold;
-    font-size:16px;
-  }
-  
-  .footer-clean ul {
-    padding:0;
-    list-style:none;
-    line-height:1.6;
-    font-size:14px;
-    margin-bottom:0;
-  }
-  
-  .footer-clean ul a {
-    color:inherit;
-    text-decoration:none;
-    opacity:0.8;
-  }
-  
-  .footer-clean ul a:hover {
-    opacity:1;
-  }
-  
+}
+
+@media (max-width: 768px) {
   .footer-clean .item.social {
-    text-align:right;
+    text-align: center;
   }
-  
-  @media (max-width:767px) {
-    .footer-clean .item {
-      text-align:center;
-      padding-bottom:20px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .footer-clean .item.social {
-      text-align:center;
-    }
-  }
-  
+}
+
+.footer-clean .item.social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  margin-top: 22px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
   .footer-clean .item.social > a {
-    font-size:24px;
-    width:40px;
-    height:40px;
-    line-height:40px;
-    display:inline-block;
-    text-align:center;
-    border-radius:50%;
-    border:1px solid #ccc;
-    margin-left:10px;
-    margin-top:22px;
-    color:inherit;
-    opacity:0.75;
+    margin-top: 40px;
   }
-  
-  .footer-clean .item.social > a:hover {
-    opacity:0.9;
+}
+
+@media (max-width: 767px) {
+  .footer-clean .item.social > a {
+    margin-top: 10px;
   }
-  
-  @media (max-width:991px) {
-    .footer-clean .item.social > a {
-      margin-top:40px;
-    }
-  }
-  
-  @media (max-width:767px) {
-    .footer-clean .item.social > a {
-      margin-top:10px;
-    }
-  }
-  
-  .footer-clean .copyright {
-    margin-top:14px;
-    margin-bottom:0;
-    font-size:13px;
-    opacity:0.6;
-  }
+}
+
+.footer-clean .copyright {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 13px;
+  opacity: 0.6;
+}
