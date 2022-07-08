@@ -5,7 +5,7 @@ import moment from "moment";
 
 import logo from "./assets/logo.svg";
 import logoVlt from "./assets/logobuy.png";
-import bgImg from "./assets/ilustrator.png";
+import bgImg from "./assets/earth.svg";
 import { useNavigate } from "react-router-dom";
 import pdf from "./assets/VaultyWp.pdf";
 import cardicon1 from "./assets/cardicon1.png";
@@ -41,6 +41,7 @@ import { store } from "./Redux/store";
 import { ProgressBar } from "react-bootstrap";
 import CounterComponent from "./Components/Counter";
 import Footer from "./Components/Footer";
+import Footer2 from "./Components/Footer2";
 function HomePage(props) {
   const [connect, setConnect] = useState(false);
   const navigate = useNavigate();
@@ -391,7 +392,7 @@ function HomePage(props) {
                   style={{
                     padding: 10,
                     height: "auto",
-                    width: "fit-content",
+                    width: "150px",
                     fontSize: "14px",
                   }}
                   className="bg-gradient-to-r from-[#a42e9a] to-[#5951f6]"
@@ -407,7 +408,7 @@ function HomePage(props) {
                     style={{
                       padding: 10,
                       height: "auto",
-                      width: "fit-content",
+                      width: "150px",
                       fontSize: "14px",
                     }}
                     className="bg-gradient-to-r from-[#a42e9a] to-[#5951f6]"

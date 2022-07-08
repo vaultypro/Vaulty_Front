@@ -6,12 +6,17 @@
   width: 100%;
   margin-left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
+
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgb(0 0 0 / 60%);
   border-radius: 10px;
 }
-
+hr {
+  height: 5px;
+}
+hr:not([size]) {
+  height: 3px;
+}
 .cardFont {
   font-size: 16px;
 }
@@ -76,7 +81,13 @@ button:active {
   transform: translateY(4px);
 }
 button:disabled {
-  background: linear-gradient(to right, #a42e9a, #5951f6);
+  background: rgb(223, 22, 181);
+  background: linear-gradient(
+    90deg,
+    rgba(223, 22, 181, 1) 0%,
+    rgba(121, 9, 120, 1) 52%,
+    rgba(0, 212, 255, 1) 100%
+  );
   box-shadow: 0 2px rgb(132, 13, 251);
   transform: translateY(px);
 }

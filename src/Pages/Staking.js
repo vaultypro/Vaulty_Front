@@ -4,7 +4,7 @@ import icon1 from "../assets/icon1.svg";
 import icon2 from "../assets/icon2.svg";
 import icon3 from "../assets/icon3.svg";
 import "./staking.css";
-
+import { FaInfo } from "react-icons/fa";
 import {
   ConnectMetamask,
   ConnectWeb3Wallet,
@@ -524,6 +524,7 @@ function Staking(props) {
           </form>
         </div> */}
         <div class="login-box">
+          <p className="text-4xl text-center p-3 font-bold">Staking Page</p>
           <div className="flex flex-wrap justify-between gap-4 ">
             <div className="flex justify-center md:justify-start ">
               <img src={logo} style={{ width: "50% " }} />
@@ -553,10 +554,10 @@ function Staking(props) {
               </p>
             </div>
           </div>
-          <hr className="bg-gradient-to-r from-[#a42e9a] to-[#5951f6] 2-xl" />
+          <hr className="border-bg " />
           <div className="flex flex-col">
-            <div className="flex">
-              <div className="flex-row md:flex-col justify-center">
+            <div className="flex p-2">
+              <div className="flex-row md:flex-col justify-center ">
                 <button
                   onClick={() => {
                     setMonth(1);
@@ -569,7 +570,7 @@ function Staking(props) {
                     setApy(1);
                   }}
                   disabled={selectedMonth.one}
-                  class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
+                  class="px-4 py-2 mx-2 mb-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
                 >
                   1 Month
                 </button>
@@ -585,7 +586,7 @@ function Staking(props) {
                     setApy(2);
                   }}
                   disabled={selectedMonth.two}
-                  class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
+                  class="px-4 py-2 mx-2 mb-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
                 >
                   3 Months
                 </button>
@@ -601,7 +602,7 @@ function Staking(props) {
                     setApy(3);
                   }}
                   disabled={selectedMonth.three}
-                  class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
+                  class="px-4 py-2 mx-2 mb-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
                 >
                   9 Months
                 </button>
@@ -617,22 +618,24 @@ function Staking(props) {
                     setApy(4);
                   }}
                   disabled={selectedMonth.four}
-                  class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
+                  class="px-4 py-2 mx-2 mb-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
                 >
                   12 Months
                 </button>
               </div>
             </div>
             <div>
-              <p className="text-3xl py-5">
+              <p className="text-2xl py-3">
                 Stake VLT on Vaulty.pro to earn a portion of the platform’s
                 revenue, distributed as VLT tokens.
               </p>
-              <div className="p-3">
-                <div className="flex items-center justify-center ">
-                  <div className="flex flex-col md:flex-row rounded-xl border-2 border-indigo-500/75 items-center p-3 justify-center">
-                    <i className="fas fa-info p-3 px-2 bg-red rounded-lg w-[50px]" />
-                    <p className="text-2xl text-gray p-2 text-justify">
+              <div className="p-1">
+                <div className="flex items-start justify-center ">
+                  <div className="flex flex-col md:flex-row rounded-3xl border-2 border-purple-500/75 p-2 items-start justify-center">
+                    <span class="border border-white p-2 rounded-full ml-5 items-start ">
+                      <FaInfo size={10} />
+                    </span>
+                    <p className="text-2xl text-gray p-2 text-justify opacity-[0.6]">
                       Ut wisi enim ad minim veniam, quis nostrud exerci tation
                       ullamcorper suscipit lobortis nisl ut aliquip ex ea
                       commodo consequat. Lorem ipsum dolor sit amet,
@@ -643,30 +646,45 @@ function Staking(props) {
                 </div>
               </div>
               <div className="flex flex-col p-3 justify-around items-center md:flex-row ">
-                <div className="border-bg flex-1 rounded-2xl ">
-                  <div className="px-0.5 py-0.5 relative">
-                    <span className="absolute bg-[#020123] -top-1.5 px-3 ml-10 text-xl">
-                      Amount of VLT to Stake
-                    </span>
-                    <input
-                      className="outline-transparent py-[14px] px-[20px] text-white bg-[#020123] w-full text-2xl rounded-2xl"
-                      type="number"
-                      min={1}
-                      step={0.01}
-                      name
-                      placeholder={"Enter Amount"}
-                      required
-                      value={Number}
-                      onChange={(e) => {
-                        if (e.target.value < 0) {
-                          setNumber("");
-                          Swal.fire("Please Enter Valid Value");
-                          return;
-                        } else {
-                          setNumber(e.target.value);
-                        }
-                      }}
-                    />
+                <div className="border-bg flex flex-1 items-center rounded-2xl items-center ">
+                  <div className="  px-0.5 py-0.5 flex flex-1 relative">
+                    <div className="bg-[#020123] px-0.5 py-0.5 relative flex flex-1 rounded-2xl items-center">
+                      <div className=" bg-[#020123]flex flex-1 relative flex-1 items-center">
+                        <div class="flex-1 items-center">
+                          {" "}
+                          <span className="absolute bg-[#020123] -top-1.5 px-3 ml-10 text-[9px] md:text-xl">
+                            Amount of VLT to Stake
+                          </span>
+                          <input
+                            className="outline-transparent py-[14px] px-[20px] text-white bg-[#020123] w-full text-2xl rounded-2xl"
+                            type="number"
+                            min={1}
+                            step={0.01}
+                            name
+                            placeholder={"Enter Amount"}
+                            required
+                            value={Number}
+                            onChange={(e) => {
+                              if (e.target.value < 0) {
+                                setNumber("");
+                                Swal.fire("Please Enter Valid Value");
+                                return;
+                              } else {
+                                setNumber(e.target.value);
+                              }
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <div className="ml-5">
+                        <span className="border-bg py-2 px-3 text-xl rounded-full ">
+                          Max
+                        </span>
+                      </div>
+                      <div className="hidden md:block mr-1">
+                        <img src={logo} width="80" />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 {maturityDate == 0 ? null : (
@@ -683,27 +701,42 @@ function Staking(props) {
                 )}
                 {!IsAlreadyStake ? (
                   <>
-                    <div className="flex-1 justify-center p-2 ">
-                      <button
-                        onClick={handleApprove}
-                        class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
-                      >
-                        Approve
-                      </button>
-                      <button class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full">
+                    <div className="flex-1 justify-center p-2 mx-auto">
+                      {/* <button class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full">
                         Stake VLT
-                      </button>
+                      </button> */}
+                      <div className="border-bg flex-1 w-fit  mx-auto rounded-full">
+                        <div className="px-0.5 py-0.5 relative w-fit">
+                          <div
+                            onClick={handleApprove}
+                            style={{ cursor: "pointer" }}
+                            className="w-fit outline-transparent py-[8px] px-[8px] text-white bg-[#020123] w-full text-2xl rounded-full py-2 px-5"
+                          >
+                            Approve
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </>
                 ) : (
                   <>
                     {" "}
-                    <button
-                      onClick={handleStake}
-                      class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full"
-                    >
-                      Stake VLT
-                    </button>
+                    <div className="flex-1 justify-center p-2 mx-auto">
+                      {/* <button class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full">
+                        Stake VLT
+                      </button> */}
+                      <div className="border-bg flex-1 w-fit  mx-auto rounded-full">
+                        <div className="px-0.5 py-0.5 relative w-fit">
+                          <div
+                            onClick={handleStake}
+                            style={{ cursor: "pointer" }}
+                            className="w-fit outline-transparent py-[8px] px-[8px] text-white bg-[#020123] w-full text-2xl rounded-full py-2 px-5"
+                          >
+                            Stake
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </>
                 )}
               </div>
