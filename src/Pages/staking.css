@@ -1,7 +1,7 @@
 .login-box {
   max-width: 1000px;
   padding: 30px;
-  margin-top: 237px;
+  margin-top: 17px;
   color: #fff !important;
   width: 100%;
   margin: 0 auto;
@@ -239,6 +239,6 @@ button:disabled {
     font-size: 12px;
   }
   .login-box {
-    margin-top: 337px;
+    margin-top: 17px;
   }
 }

@@ -22,6 +22,7 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import Swal from "sweetalert2";
 import { airdropABI } from "../Config/ABI/AirdopABI";
+import Footer from "../Components/Footer";
 
 function Airdrop(props) {
   const [connect, setConnect] = useState(false);
@@ -413,6 +414,7 @@ function Airdrop(props) {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 }
@@ -424,4 +426,3 @@ const mapStateToProps = (state) => {
   };
 };
 export default connect(mapStateToProps, null)(Airdrop);
- 

@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 import { connect } from "react-redux";
 import Swal from "sweetalert2";
 import CounterComponent from "../Components/Counter";
+import Footer from "../Components/Footer";
 
 function Staking(props) {
   const [connect, setConnect] = useState(false);
@@ -617,6 +618,7 @@ function Staking(props) {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
