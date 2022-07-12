@@ -325,9 +325,9 @@ function Staking(props) {
           App trading fees
         </p>
         <div class="login-box p-5">
-          <div className="flex flex-wrap justify-between gap-2 ">
+          <div className="flex flex-wrap justify-between gap-3 ">
             <div className="flex justify-center md:justify-start ">
-              <img src={logo} style={{ width: "30% " }} />
+              <img src={logo} style={{ maxWidth: "250px" }} />
             </div>
             <div className="flex flex-col">
               <p className="text-2xl text-gray">Claimable(USDT) Value</p>
