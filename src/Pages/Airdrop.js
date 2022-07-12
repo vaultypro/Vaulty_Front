@@ -116,14 +116,18 @@ function Airdrop(props) {
           console.log("Airdop Called");
           await getAirdop()
             .then((res) =>
-              Swal.fire("Success", "Airdop Claim Successfully", "success")
+              Swal.fire("Success", "Airdrop Claimed Successfully", "success")
             )
-            .catch(() => Swal.fire("error", "Please try again.", "error"));
+            .catch(() => Swal.fire("Error", "Please try again.", "error"));
         } else {
-          Swal.fire("AirDrop does not have sufficent fund");
+          Swal.fire(
+            "Warning",
+            "Airdrop Does Not Have Sufficent Fund",
+            "warning"
+          );
         }
       } else {
-        Swal.fire("User Already Exist");
+        Swal.fire("Warning", "User Already Exist", "warning");
       }
 
       // if (isAddressInArray(AirdropUsers, msg.sender) == false, "User already claimed"){
@@ -391,6 +395,7 @@ function Airdrop(props) {
             <div className="flex justify-center my-3">
               <button
                 className="glow-on-hover"
+                onClick={claimAirdrop}
                 style={{ width: "300px", height: "auto", padding: 10 }}
               >
                 Claim Airdrop
