@@ -159,13 +159,6 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-
-        <div
-          className="text-center text-2xl p-4"
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
-        >
-          ©2022 Vaulty. All rights reserved
-        </div>
       </footer>
     </div>
   );
