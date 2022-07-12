@@ -1,19 +1,43 @@
 import React from "react";
 import "./footer.css";
 import logo from "../assets/logo.svg";
+import appstore from "../assets/Conditions documents/appstore.svg";
+import playstore from "../assets/Conditions documents/playstore.svg";
 import pdf from "../assets/VaultyWp.pdf";
+import antifraud from "../assets/Conditions documents/anti-fraud_policy.pdf";
+import termsofexchange from "../assets/Conditions documents/Coinovy_terms_of_exchange_operations.pdf";
+import termsofuse from "../assets/Conditions documents/Coinovy_terms_of_use.pdf";
+import privacypolicy from "../assets/Conditions documents/coinovy-Privacy-Policy.pdf";
+import cookiepolicy from "../assets/Conditions documents/cookie_policy.pdf";
+import tos from "../assets/Conditions documents/tos.pdf";
+import toc from "../assets/Conditions documents/terms_of_credits.pdf";
+
 export default function Footer() {
   return (
     <div>
       {" "}
       <footer className="text-center bg-[#0d0d2b] text-white">
         <div className="flex flex-wrap justify-evenly p-20 items-start">
-          <img src={logo} alt="Vaulty Logo" className="main-footer__logo" />
+          <div className="flex flex-col">
+            <img src={logo} alt="Vaulty Logo" className="main-footer__logo" />
+            <p>©2022 Vaulty. All rights reserved</p>
+          </div>
+
           <div>
             <ul style={{ textAlign: "justify" }}>
               <li className="text-2xl p-2 font-bold text-white">Application</li>
-              <li className="p-2 text-xl">Apple Store Logo</li>
-              <li className="p-2 text-xl">Android Store Logo</li>
+              <li className="p-2 text-xl flex">
+                <div className="flex items-center">
+                  <img src={appstore} width="30" />
+                  <p className="mx-2">App Store</p>
+                </div>
+              </li>
+              <li className="p-2 text-xl">
+                <div className="flex items-center">
+                  <img src={playstore} width="30" />
+                  <p className="mx-2">Play store</p>
+                </div>
+              </li>
             </ul>
           </div>
 
@@ -21,14 +45,49 @@ export default function Footer() {
             {" "}
             <ul style={{ textAlign: "justify" }}>
               <li className="text-2xl py-2 font-bold text-white">Conditions</li>
-              <li className="text-xl">MasterCard </li>
-              <li className="text-xl">Terms of Service</li>
-              <li className="text-xl"> Anti Fraud Policy</li>
-              <li className="text-xl"> Cookie Policy</li>
-              <li className="text-xl">Terms of Credits</li>
-              <li className="text-xl">Privacy Policy</li>
-              <li className="text-xl">Terms of Use</li>
-              <li className="text-xl">Terms of Exchange</li>
+
+              <li className="text-xl">
+                <a href={tos} target="_blank">
+                  Terms of Service
+                </a>
+              </li>
+              <li className="text-xl">
+                {" "}
+                <a href={antifraud} target="_blank">
+                  Anti Fraud Policy
+                </a>
+              </li>
+              <li className="text-xl">
+                {" "}
+                <a href={cookiepolicy} target="_blank">
+                  Cookie Policy
+                </a>{" "}
+              </li>
+              <li className="text-xl">
+                <li className="text-xl">
+                  {" "}
+                  <a href={toc} target="_blank">
+                    Terms of Credits
+                  </a>{" "}
+                </li>
+              </li>
+              <li className="text-xl">
+                <a href={privacypolicy} target="_blank">
+                  Privacy Policy
+                </a>{" "}
+              </li>
+              <li className="text-xl">
+                <a href={termsofuse} target="_blank">
+                  Terms of Use
+                </a>{" "}
+              </li>
+              <li className="text-xl">
+                {" "}
+                <a href={termsofexchange} target="_blank">
+                  {" "}
+                  Terms of Exchange
+                </a>
+              </li>
             </ul>
           </div>
           <div>
@@ -46,27 +105,33 @@ export default function Footer() {
                     <div class="nav-links">
                       <i class="fab fa-instagram"></i>
                     </div>
-                    <span class="nav-link-text">Instagram</span>
                   </a>
                   <a
                     href="https://twitter.com/VaultyPRO"
                     target="_blank"
-                    class="nav-item"
+                    class="nav-item mx-2"
                   >
                     <div class="nav-links transition-all">
                       <i class="fab fa-twitter"></i>
                     </div>
-                    <span class="nav-link-text">Twitter</span>
                   </a>
                   <a
                     href="https://www.facebook.com/VaultyPRO"
                     target="_blank"
-                    class="nav-item"
+                    class="nav-item mx-2"
                   >
                     <div class="nav-links transition-all">
                       <i class="fab fa-facebook"></i>
                     </div>
-                    <span class="nav-link-text">Facebook</span>
+                  </a>
+                  <a
+                    href="https://discord.com/invite/pUcjq95w"
+                    target="_blank"
+                    class="nav-item mx-2"
+                  >
+                    <div class="nav-links transition-all">
+                      <i class="fab fa-discord"></i>
+                    </div>
                   </a>
                   <a
                     href="https://t.me/vaultypro"
@@ -76,7 +141,6 @@ export default function Footer() {
                     <div class="nav-links transition-all">
                       <i class="fab fa-telegram"></i>
                     </div>
-                    <span class="nav-link-text">Telegram</span>
                   </a>
                 </div>
               </li>

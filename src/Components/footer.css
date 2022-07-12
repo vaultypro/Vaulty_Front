@@ -52,9 +52,10 @@
   transition-duration: 0.15s;
 }
 .nav-links {
-  color: rgba(119, 22, 237, 0.8);
-  background-color: #000;
-  border-radius: 0.5rem;
+  color: #fff;
+
+  border-radius: 999px;
+  border: 1px solid rgba(121, 9, 120, 1);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +63,12 @@
   height: 4rem;
 }
 .nav-links:hover {
-  background-color: rgba(145, 31, 207, 0.8);
+  background: linear-gradient(
+    90deg,
+    rgba(223, 22, 181, 1) 0%,
+    rgba(121, 9, 120, 1) 52%,
+    rgba(0, 212, 255, 1) 100%
+  );
   color: #eee !important;
   transform: scaleX(1.1) scaleY(1.1);
 }

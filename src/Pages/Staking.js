@@ -215,7 +215,10 @@ function Staking(props) {
   return (
     <div>
       <div className="main-container" style={{ padding: "20px" }}>
-        <header className="main-header">
+        <header
+          className="main-header"
+          style={{ marginBottom: "10px !important" }}
+        >
           <div
             className="main-header-content-container"
             style={{ justifyContent: "unset" }}
@@ -313,218 +316,14 @@ function Staking(props) {
             </header>
           </div>
         </header>
-        {/* <div class="login-box">
-          <h2 style={{ fontSize: 22 }}>Choose Staking Duration</h2>
-          <div
-            style={{
-              display: "flex",
-              margin: "10 -5px",
-
-              justifyContent: "space-around",
-            }}
-          >
-            <div>
-              <button
-                className="btnStake"
-                onClick={() => {
-                  setMonth(1);
-                  setSelectedMonth({
-                    one: true,
-                    two: false,
-                    three: false,
-                    four: false,
-                  });
-                  setApy(2);
-                }}
-                disabled={selectedMonth.one}
-              >
-                1 Month
-              </button>
-            </div>
-            <div>
-              <button
-                className="btnStake"
-                onClick={() => {
-                  setMonth(2);
-                  setApy(5);
-                  setSelectedMonth({
-                    one: false,
-                    two: true,
-                    three: false,
-                    four: false,
-                  });
-                }}
-                disabled={selectedMonth.two}
-              >
-                3 Months
-              </button>
-            </div>
-            <div>
-              <button
-                className="btnStake"
-                onClick={() => {
-                  setMonth(3);
-                  setApy(20);
-                  setSelectedMonth({
-                    one: false,
-                    two: false,
-                    three: true,
-                    four: false,
-                  });
-                }}
-                disabled={selectedMonth.three}
-              >
-                6 Months
-              </button>
-            </div>
-            <div>
-              <button
-                className="btnStake"
-                onClick={() => {
-                  setMonth(4);
-                  setApy(50);
-                  setSelectedMonth({
-                    one: false,
-                    two: false,
-                    three: false,
-                    four: true,
-                  });
-                }}
-                disabled={selectedMonth.four}
-              >
-                12 Months
-              </button>
-            </div>
-          </div>
-
-          <form>
-            <div
-              className="user-box"
-              style={{
-                margin: "5px",
-              }}
-            >
-              <input
-                type="number"
-                min={1}
-                name
-                placeholder={"Enter Amount"}
-                required
-                value={Number}
-                onChange={(e) => {
-                  if (e.target.value < 0) {
-                    setNumber("");
-                    Swal.fire("please enter valid value");
-                    return;
-                  } else {
-                    setNumber(e.target.value);
-                  }
-                }}
-                style={{ margin: 10 }}
-              />
-            </div>
-
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <div>
-                <p className="cardFont">APY</p>
-              </div>
-              <div>
-                <p className="cardFont"> {apy} %</p>
-              </div>
-            </div>
-
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <div>
-                <p className="cardFont">You staked : </p>
-              </div>
-              <div>
-                <p className="cardFont">
-                  {" "}
-                  {UserData && UserData.stackAmount / Math.pow(10, 9)} $VLT
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="flexClass"
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-              }}
-            >
-              <div>
-                <p className="cardFont">Your balance : </p>
-              </div>
-              <div>
-                <p className="cardFont">
-                  {" "}
-                  {UserBalance &&
-                    parseFloat(UserBalance / Math.pow(10, 9)).toFixed(3)}{" "}
-                  $VLT
-                </p>
-              </div>
-            </div>
-
-            <div style={{ display: "flex", justifyContent: "space-between" }}>
-              <div>
-                <p className="cardFont">Total staked : </p>
-              </div>
-              <div>
-                <p className="cardFont">
-                  {" "}
-                  {TotalStaked / Math.pow(10, 9)} $VLT
-                </p>
-              </div>
-            </div>
-
-            {!IsAlreadyStake ? (
-              <>
-                {" "}
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-around",
-                  }}
-                >
-                  {!Approval ? (
-                    <>
-                      <a onClick={handleApprove} style={{ cursor: "pointer" }}>
-                        <span />
-                        <span />
-                        <span />
-                        <span />
-                        Approve
-                      </a>
-                    </>
-                  ) : (
-                    <></>
-                  )}
-
-                  <a onClick={handleStake} style={{ cursor: "pointer" }}>
-                    <span />
-                    <span />
-                    <span />
-                    <span />
-                    Stake
-                  </a>
-                </div>
-              </>
-            ) : (
-              <>
-                {" "}
-                <a onClick={handleUnStake}>
-                  <span />
-                  <span />
-                  <span />
-                  <span />
-                  Unstake
-                </a>
-              </>
-            )}
-          </form>
-        </div> */}
-        <div class="login-box">
-          <p className="text-4xl text-center p-3 font-bold">Staking Page</p>
+        <h1 className="text-5xl" style={{ textAlign: "center", padding: 20 }}>
+          How To Participate ?
+        </h1>
+        <p className="text-3xl text-center color-[gray] opacity-[0.6]">
+          Stake and earn additional VLT on top of purchased tokens and Vaulty
+          App trading fees
+        </p>
+        <div class="login-box p-5">
           <div className="flex flex-wrap justify-between gap-4 ">
             <div className="flex justify-center md:justify-start ">
               <img src={logo} style={{ width: "50% " }} />
@@ -556,8 +355,8 @@ function Staking(props) {
           </div>
           <hr className="border-bg " />
           <div className="flex flex-col">
-            <div className="flex p-2">
-              <div className="flex-row md:flex-col justify-center ">
+            <div className="flex p-2 m-4">
+              <div className="flex-row md:flex-col justify-center">
                 <button
                   onClick={() => {
                     setMonth(1);
@@ -690,7 +489,6 @@ function Staking(props) {
                 {maturityDate == 0 ? null : (
                   <>
                     <h1>Maturity Time</h1>
-
                     <CounterComponent endDate={maturityDate} />
                     <p className="cardFont">
                       *Complete Maturity Time To Get Rewards.
@@ -705,34 +503,53 @@ function Staking(props) {
                       {/* <button class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full">
                         Stake VLT
                       </button> */}
-                      <div className="border-bg flex-1 w-fit  mx-auto rounded-full">
-                        <div className="px-0.5 py-0.5 relative w-fit">
-                          <div
-                            onClick={handleApprove}
-                            style={{ cursor: "pointer" }}
-                            className="w-fit outline-transparent py-[8px] px-[8px] text-white bg-[#020123] w-full text-2xl rounded-full py-2 px-5"
-                          >
-                            Approve
+                      {Approval ? (
+                        <>
+                          <div className="border-bg flex-1 w-fit  mx-initial rounded-full">
+                            <div className="px-0.5 py-0.5 relative w-fit">
+                              <div
+                                onClick={handleStake}
+                                style={{ cursor: "pointer" }}
+                                className="w-fit outline-transparent py-[8px] px-[8px] text-white bg-[#020123] w-full text-2xl rounded-full py-2 px-5"
+                              >
+                                Stake
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
+                        </>
+                      ) : (
+                        <>
+                          {" "}
+                          <div className="border-bg flex-1 w-fit  mx-initial rounded-full">
+                            <div className="px-0.5 py-0.5 relative w-fit">
+                              <div
+                                onClick={handleStake}
+                                style={{ cursor: "pointer" }}
+                                className="w-fit outline-transparent py-[8px] px-[8px] text-white bg-[#020123] w-full text-2xl rounded-full py-2 px-5"
+                              >
+                                Approve
+                              </div>
+                            </div>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </>
                 ) : (
                   <>
                     {" "}
-                    <div className="flex-1 justify-center p-2 mx-auto">
+                    <div className="flex-1 justify-center p-2 mx-initial">
                       {/* <button class="px-4 py-2 mx-2 border border-sky-500 bg-transparent hover:bg-gradient-to-r from-[#a42e9a] to-[#5951f6] text-white text-2xl font-medium rounded-full">
                         Stake VLT
                       </button> */}
                       <div className="border-bg flex-1 w-fit  mx-auto rounded-full">
                         <div className="px-0.5 py-0.5 relative w-fit">
                           <div
-                            onClick={handleStake}
+                            onClick={handleUnStake}
                             style={{ cursor: "pointer" }}
                             className="w-fit outline-transparent py-[8px] px-[8px] text-white bg-[#020123] w-full text-2xl rounded-full py-2 px-5"
                           >
-                            Stake
+                            Unstake
                           </div>
                         </div>
                       </div>
@@ -743,14 +560,20 @@ function Staking(props) {
             </div>
           </div>
         </div>
+        <h1 style={{ textAlign: "center", padding: 20, marginTop: 60 }}>
+          Why Stake Your VLT?
+        </h1>
         <div className="flex flex-wrap md:flex-unwrap justify-center gap-4">
-          <div className="w-[300px] p-5 bg-[#00000080] rounded-xl mx-2">
+          <div className="cards p-5  shadow-2xl rounded-xl mx-2">
             <div>
               <img src={icon1} style={{ maxWidth: "100px" }} />
               <p className="text-3xl text-white">Earn Rewards</p>
             </div>
 
-            <hr />
+            <div
+              className="border-bg"
+              style={{ height: 2, marginBottom: 6 }}
+            ></div>
             <p className="text-2xl text-white">
               Rewards are given for actions that help the network reach
               consensus. You'll get rewards for running software that properly
@@ -758,12 +581,15 @@ function Staking(props) {
               validators because that's what keeps the chain running securely.
             </p>
           </div>
-          <div className="w-[300px] p-5 bg-[#00000080] rounded-xl mx-2">
+          <div className="w-[300px] p-5 cards rounded-xl mx-2">
             <div>
               <img src={icon2} style={{ maxWidth: "100px" }} />
               <p className="text-3xl text-white">Better Security</p>
             </div>
-            <hr />
+            <div
+              className="border-bg"
+              style={{ height: 2, marginBottom: 6 }}
+            ></div>
             <p className="text-2xl text-white">
               Rewards are given for actions that help the network reach
               consensus. You'll get rewards for running software that properly
@@ -771,17 +597,19 @@ function Staking(props) {
               validators because that's what keeps the chain running securely.
             </p>
           </div>
-          <div className="w-[300px] p-5 bg-[#00000080] rounded-xl mx-2">
+          <div className="w-[300px] p-5 cards rounded-xl mx-2">
             <div>
               <img src={icon3} style={{ maxWidth: "100px" }} />
               <p className="text-3xl text-white">More Sustainable</p>
             </div>
-            <hr />
+            <div
+              className="border-bg"
+              style={{ height: 2, marginBottom: 6 }}
+            ></div>
             <p className="text-2xl text-white">
-              Rewards are given for actions that help the network reach
-              consensus. You'll get rewards for running software that properly
-              batches transactions into new blocks and checks the work of other
-              validators because that's what keeps the chain running securely.
+              Stakers don't need energy-intensive computers to participate in a
+              proof-of-stake system–just a home computer or smartphone. This
+              will make Vaulty better for the environment.
             </p>
           </div>
         </div>

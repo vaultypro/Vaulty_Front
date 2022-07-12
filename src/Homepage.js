@@ -272,17 +272,6 @@ function HomePage(props) {
             />
             <ul className="main-header-navbar__nav">
               <li className="main-header-navbar__nav__item">
-                <a
-                  href="#"
-                  className="main-header-navbar__nav__link"
-                  onClick={() => {
-                    navigate("/coininfo");
-                  }}
-                >
-                  Token Info
-                </a>
-              </li>
-              <li className="main-header-navbar__nav__item">
                 <a href="#buy" className="main-header-navbar__nav__link">
                   Buy
                 </a>
@@ -394,6 +383,7 @@ function HomePage(props) {
                     height: "auto",
                     width: "150px",
                     fontSize: "14px",
+                    color: "white",
                   }}
                   className="bg-gradient-to-r from-[#a42e9a] to-[#5951f6]"
                 >
@@ -640,9 +630,16 @@ function HomePage(props) {
                       ) : (
                         <>
                           <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSfrh5crFbB1uHoNIrcdRhvVGvd9zSL-RbrH6C9djURT2Ba9Gg/viewform?usp=sf_link"
-                            className="why-us-section__content__btn"
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfkrRTtXCzk4yVQu1BKslaGlbVLCMzfFVd4SCp8T46EZaOT1w/viewform"
+                            className="glow-on-hover"
                             target="_blank"
+                            style={{
+                              width: "300px",
+                              height: "auto",
+                              padding: 10,
+                              textAlign: "center",
+                              textDecoration: "none",
+                            }}
                           >
                             {spinnerBuy ? (
                               <Spinner
@@ -650,16 +647,7 @@ function HomePage(props) {
                                 style={{ width: 30, height: 30 }}
                               />
                             ) : (
-                              <button
-                                className="glow-on-hover"
-                                style={{
-                                  width: "300px",
-                                  height: "auto",
-                                  padding: 10,
-                                }}
-                              >
-                                Add To Whitelist
-                              </button>
+                              <>Add To Whitelist</>
                             )}
                           </a>
                         </>
@@ -717,7 +705,7 @@ function HomePage(props) {
                       }}
                     >
                       <div>Presale Rate :</div>
-                      <div>{details && details[2] / Math.pow(10, 18)} BUSD</div>
+                      <div>{details && details[2] / Math.pow(10, 18)} USDT</div>
                     </h4>
                     <h4
                       className="card-info__title"
@@ -892,44 +880,6 @@ function HomePage(props) {
               className="grow-profit-article__graphic"
             />
           </article>
-          {/* <div class="basr-social-share social">
-            <ul class="">
-              <li>
-                <a class="facebook" href="">
-                  <i class="fa fa-facebook"></i>
-                  <span>Facebook</span>
-                </a>
-              </li>
-
-              <li>
-                <a class="twitter" href="">
-                  <i class="fa fa-twitter"></i>
-                  <span>Twitter</span>
-                </a>
-              </li>
-
-              <li>
-                <a class="googleplus" href="">
-                  <i class="fa fa-google-plus"></i>
-                  <span>Google Plus</span>
-                </a>
-              </li>
-
-              <li>
-                <a class="linkedin" href="">
-                  <i class="fa fa-linkedin"></i>
-                  <span>Linkedin</span>
-                </a>
-              </li>
-
-              <li>
-                <a class="tumblr" href="">
-                  <i class="fa fa-tumblr"></i>
-                  <span>Tumblr</span>
-                </a>
-              </li>
-            </ul>
-          </div> */}
         </section>
         <section>
           <h1
@@ -971,86 +921,6 @@ function HomePage(props) {
         <img src={RoadmapMobile} className="widthClsMobile" />
       </section>
 
-      {/* Main footer */}
-      {/* <footer className="main-footer" style={{ padding: "10px 0" }}>
-        <div className="footer-container">
-          <img
-            src={logo}
-            alt="KeeSwap company logo"
-            className="main-footer__logo"
-          />
-
-          <nav className="main-footer-navbar">
-
-            <ul className="main-footer-navbar__nav">
-              <li className="main-footer-navbar__nav__item">
-                <h3 className="main-footer-navbar__nav__title">Quick Link</h3>
-              </li>
-              <li className="main-footer-navbar__nav__item">
-                <a href="#" className="main-footer-navbar__nav__link">
-                  Home
-                </a>
-              </li>
-              <li className="main-footer-navbar__nav__item">
-                <a href="#about" className="main-footer-navbar__nav__link">
-                  Buy
-                </a>
-              </li>
-              <li className="main-footer-navbar__nav__item">
-                <a href="#values" className="main-footer-navbar__nav__link">
-                  Values
-                </a>
-              </li>
-              <li className="main-footer-navbar__nav__item">
-                <a href="#price" className="main-footer-navbar__nav__link">
-                  Price
-                </a>
-              </li>
-              <li className="main-footer-navbar__nav__item">
-                <a href="#roadmap" className="main-footer-navbar__nav__link">
-                  Roadmap
-                </a>
-              </li>
-            </ul>
-
-            <ul className="main-footer-navbar__nav">
-              <li className="main-footer-navbar__nav__item">
-                <h3 className="main-footer-navbar__nav__title">Resources</h3>
-              </li>
-              <li className="main-footer-navbar__nav__item">
-                <a
-                  href={pdf}
-                  target="_blank"
-                  className="main-footer-navbar__nav__link"
-                >
-                  Download whitepaper
-                </a>
-              </li>
-            </ul>
-          </nav>
-
-          <div className="copy-and-social">
-            <h3
-              className="copy-and-social__copy"
-              style={{ color: "aliceblue" }}
-            >
-              ©2022 Valuty. All rights reserved
-            </h3>
-            <div className="social-icons">
-              <a href="https://www.facebook.com/VaultyPRO" target="_blank">
-                <i className="fab fa-facebook-f" />
-              </a>
-              <a href="https://www.instagram.com/vaultypro/" target="_blank">
-                <i className="fab fa-instagram" />
-              </a>
-
-              <a href="https://twitter.com/VaultyPRO" target="_blank">
-                <i className="fab fa-twitter" width="150" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer> */}
       <Footer />
       {/* Attribution footer */}
     </div>
