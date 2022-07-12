@@ -560,9 +560,12 @@ function Staking(props) {
             </div>
           </div>
         </div>
-        <h1 style={{ textAlign: "center", padding: 20, marginTop: 60 }}>
+        <p
+          className="text-4xl"
+          style={{ textAlign: "center", padding: 20, marginTop: 60 }}
+        >
           Why Stake Your VLT?
-        </h1>
+        </p>
         <div className="flex flex-wrap md:flex-unwrap justify-center gap-4">
           <div className="cards p-5  shadow-2xl rounded-xl mx-2">
             <div>
