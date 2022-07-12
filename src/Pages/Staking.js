@@ -316,9 +316,9 @@ function Staking(props) {
             </header>
           </div>
         </header>
-        <h1 className="text-5xl" style={{ textAlign: "center", padding: 20 }}>
+        <p className="text-4xl" style={{ textAlign: "center", padding: 20 }}>
           How To Participate ?
-        </h1>
+        </p>
         <p className="text-3xl text-center color-[gray] opacity-[0.6]">
           Stake and earn additional VLT on top of purchased tokens and Vaulty
           App trading fees
