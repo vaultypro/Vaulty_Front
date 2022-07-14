@@ -668,6 +668,7 @@ function HomePage(props) {
                 <button
                   className="glow-on-hover"
                   style={{ width: "300px", height: "auto", padding: 10 }}
+                  onClick={handleClick}
                 >
                   Please Connect Wallet
                 </button>
